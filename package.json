@@ -17,6 +17,7 @@
     "db:reset": "bun run scripts/reset.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
+    ”db:createAdmin”: ”bun run scripts/createAdmin.ts”
   },
   "dependencies": {
     "@nuxt/icon": "^1.12.0",
