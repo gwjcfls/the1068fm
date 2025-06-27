@@ -1,10 +1,16 @@
 import { exportPKCS8, exportSPKI, generateKeyPair } from 'jose';
 
-// generate keys for encryption and signing
-const { publicKey: encPublic, privateKey: encPrivate } = await generateKeyPair('RSA-OAEP-256');
-const { publicKey: signPublic, privateKey: signPrivate } = await generateKeyPair('RS512');
+// 生成加密密钥对，设置extractable为true
+const { publicKey: encPublic, privateKey: encPrivate } = await generateKeyPair('RSA-OAEP-256', {
+  extractable: true,
+});
 
-// generate a unique key Id
+// 生成签名密钥对，设置extractable为true
+const { publicKey: signPublic, privateKey: signPrivate } = await generateKeyPair('RS512', {
+  extractable: true,
+});
+
+// 生成唯一的密钥ID
 const encKeyId = `enc-${new Date().toISOString()}`;
 const signKeyId = `sign-${new Date().toISOString()}`;
 
