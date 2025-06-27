@@ -16,7 +16,7 @@
     "db:seed": "bun run scripts/seed.ts",
     "db:reset": "bun run scripts/reset.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
     ”db:createAdmin”: ”bun run scripts/createAdmin.ts”
   },
   "dependencies": {
